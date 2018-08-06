@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<input id="rearrange" type="text" name="" value="">
+<button id="button"></button>
+<script>
+  console.log('hello!')
+  const getRandomIntInclusive = (min, max) => {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
+    }
+  document.getElementById('button').addEventListener("click",()=>{
+    let test = document.getElementById('rearrange').value.split(' ')
+    while(test.length > 0){
+      let popped = test.pop(getRandomIntInclusive(0,test.length -1))
+      console.log(popped)
+    }
+  })
+
+</script>
+</body>
+</html>
