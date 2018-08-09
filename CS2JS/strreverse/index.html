@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input id="reverse" type="text">
+  <button id="button" >Click</button>
+<!-- Javascript -->
+<script>
+  const button = document.getElementById('button');
+  const reverse = document.getElementById('reverse');
+  const reverser = (str)=>{
+  let reversed =''
+  for(let char of str){
+    reversed += char
+    }
+    console.log(reversed)
+  };
+
+  button.addEventListener('click', () =>{
+    reverser(reverse.value)
+  })
+</script>
+</body>
+</html>

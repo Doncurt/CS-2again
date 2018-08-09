@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<h1></h1>
+<p>Noun</p>
+<input id="noun" type="text" name="">
+<p>Verb</p>
+<input id="verb" type="text" name="" >
+<p>Adjective</p>
+<input id="adjective" type="text" name="">
+<button id="button">Click</button>
+<script>
+
+  const button = document.getElementById('button');
+  const noun = document.getElementById('noun');
+  const verb = document.getElementById('verb');
+  const adjective = document.getElementById('adjective');
+  button.addEventListener("click", () =>{
+
+    console.log(`${verb.value} ${noun.value} ${adjective.value}`);
+  })
+</script>
+</body>
+</html>
