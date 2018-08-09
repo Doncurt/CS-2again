@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dictionary Works</title>
+</head>
+<body>
+  <main id="main">
+    <input id="input" type="text">
+    <button id="button">Click</button>
+  </main>
+  <script>
+  // Variables
+  const num = document.getElementById('input');
+  const button =document.getElementById('button');
+  const main = document.getElementById('main');
+  // functions
+  const getRandomIntInclusive = (min, max) => {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
+    }
+  // Event listeners
+  button.addEventListener('click', ()=>{
+    dictionary(input.value);
+  })
+  const dictionary = async (num) =>{
+    console.log()
+   const text =  await fetch('words_alpha.txt')
+  const returnText = await text.text()
+  returnTextSplit = returnText.split('\n')
+  for(let i= 0; i < num; i++){
+    let div = document.createElement('div');
+    let p = document.createElement('p');
+    p.innerHTML = returnTextSplit[getRandomIntInclusive(0,returnTextSplit.length-1)];
+    div.appendChild(p);
+    main.appendChild(div);
+  }
+
+    }
+
+  </script>
+</body>
+</html>

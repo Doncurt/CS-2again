@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body id="body">
+<main id="main">
+  <h1>Input Text Here</h1>
+  <input type="text" id="input">
+  <button id='button'>Click</button>
+</main>
+
+  <script>
+    const input = document.getElementById('input');
+    const button = document.getElementById('button');
+    const main = document.getElementById('main');
+    button.addEventListener('click',()=>{
+    let div = document.createElement("div");
+      div.innerHTML= input.value
+      main.appendChild(div);
+    })
+  </script>
+</body>
+</html>
