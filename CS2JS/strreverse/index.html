@@ -14,11 +14,11 @@
   const button = document.getElementById('button');
   const reverse = document.getElementById('reverse');
   const reverser = (str)=>{
-  let reversed =''
+  let reversed =[];
   for(let char of str){
-    reversed += char
+    reversed.splice(0,0,char)
     }
-    console.log(reversed)
+    console.log(reversed.join(''))
   };
 
   button.addEventListener('click', () =>{
