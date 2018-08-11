@@ -12,63 +12,6 @@
   <input id="input" type="text">
   <button id="button">Click Me</button>
 </main>
-<script>
-  const counter = (arr_to_count,word) =>{
-    // Function to count the occurances of a word in an array of words
-    // returns an array with [0] being the word and [1] being the count
-    let setOfWords = arr_to_count.filter(target => target == word)
-    return [word,setOfWords.length]
-  }
-
-  // Helper Function
-  const fileToArrayGram = async (file_path)=>{
-    const file = await fetch(file_path);
-    const fileText = await file.text()
-    const newlineCleaner =fileText.replace('\n',"");
-    const periodCleaner = newlineCleaner.replace('.','');
-    const commaCleaner = periodCleaner.replace(',','');
-    const split = commaCleaner.split(' ');
-    // console.log(split)
-    // const arrayGram = split.reduce()
-    console.log(counter(split,'a'))
-    return split
-  }
-  const testFile =fileToArrayGram('source.txt');
-
-  // class definitions
-  class Histogram {
-    constructor(file_path){
-    this.file_path =file_path;
-    }
-    // Getter
-    get path(){
-      return this._file_path;
-    }
-    // end Getter
-
-    // Setter
-    set file_path(file_name){
-      if(file_name.endsWith('.txt')){
-        console.log("Valid")
-        this._file_path = file_name;
-      }
-      else{
-        console.log("Not a valid .txt extention")
-      }
-    }
-  // end Setter
-  arrayHistogram(){
-    console.log('hello');
-  }
-
-  }
-
-
-// Instances of class
-
-let test = new Histogram('source.txt')
-console.log(test.path)
-test.arrayHistogram()
-</script>
+<script type="module" src='main.js'></script>
 </body>
 </html>
